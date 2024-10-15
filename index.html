@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="flex-container">
+        <div class="flex-item glassmorph transform3D">
+            <h1>Carbon Footprint Calculator</h1>
+            <hr>
+            <form id="calculatorForm">
+                <div class="form-group">
+                    <label for="electricity">Electricity Usage (kWh):</label>
+                    <input type="number" id="electricity" name="electricity" min="0" step="any">
+                </div>
+                <div class="form-group">
+                    <label for="naturalGas">Natural Gas Usage (therms):</label>
+                    <input type="number" id="naturalGas" name="naturalGas" min="0" step="any">
+                </div>
+                <div class="form-group">
+                    <label for="heatingOil">Heating Oil Usage (gallons):</label>
+                    <input type="number" id="heatingOil" name="heatingOil" min="0" step="any">
+                </div>
+                <div class="form-group">
+                    <label for="propane">Propane Usage (gallons):</label>
+                    <input type="number" id="propane" name="propane" min="0" step="any">
+                </div>
+                <div class="form-group">
+                    <label for="miles">Car Travel (miles):</label>
+                    <input type="number" id="miles" name="miles" min="0" step="any">
+                </div>
+                <div class="form-group">
+                    <label for="fuelConsumption">Fuel Consumption (gallons):</label>
+                    <input type="number" id="fuelConsumption" name="fuelConsumption" min="0" step="any">
+                </div>
+                <div class="form-group">
+                    <label for="publicTransit">Public Transit Travel (miles):</label>
+                    <input type="number" id="publicTransit" name="publicTransit" min="0" step="any">
+                </div>
+                <div class="form-group">
+                    <label for="airTravel">Air Travel (miles):</label>
+                    <input type="number" id="airTravel" name="airTravel" min="0" step="any">
+                </div>
+                <div class="form-group">
+                    <label for="waste">Waste Produced (kg):</label>
+                    <input type="number" id="waste" name="waste" min="0" step="any">
+                </div>
+                <div class="form-group">
+                    <label for="recycledWaste">Waste Recycled (kg):</label>
+                    <input type="number" id="recycledWaste" name="recycledWaste" min="0" step="any">
+                </div>
+                <div class="form-group">
+                    <label for="diet">Dietary Habits:</label>
+                    <select id="diet" name="diet">
+                        <option value="average">Average (mixed diet)</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                    </select>
+                </div>
+                <button type="button" onclick="calculateCarbonFootprint()">Calculate</button>
+            </form>
+            <h2>Your Carbon Footprint: <span id="result">0</span> kg CO2e</h2>
+        </div>
+        <script src="script.js"></script>
+    </main>
+</body>
+
+</html>
